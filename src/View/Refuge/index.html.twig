@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Refuges</h1>
+    <ul>
+        {% for item in refuges %}
+            <li><a href="/refuge/show/{{ item.id }}">{{ item.id }}. {{ item.name }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/refuge/add">Ajouter</a>
+{% endblock %}

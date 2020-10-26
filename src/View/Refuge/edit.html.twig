@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Edit refuge {{ refuge.name }}</h1>
+    {% include 'Refuge/_form.html.twig' %}
+    <a href="/refuge/show/{{ refuge.id }}">Back</a>
+{% endblock %}
